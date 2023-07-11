@@ -4,11 +4,13 @@
 #include <QImage>
 #include "addset.h"
 
+
 AddCard::AddCard(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::AddCard)
 {
     ui->setupUi(this);
+
 }
 
 AddCard::~AddCard()
@@ -33,11 +35,11 @@ void AddCard::on_pushButton_clicked()
    c1.cardRarity = ui->rarity->text();
 
    cards.push_back(c1);
-
    qDebug() << c1.cardName + " added to vector";
-   close();
-   AddSet *newAddSetWindow = new class AddSet;
+   hide();
+   AddSet *newAddSetWindow = new AddSet;
    newAddSetWindow->show();
+
 
 }
 

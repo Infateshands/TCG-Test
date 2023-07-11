@@ -65,16 +65,19 @@ void MainWindow::on_loginButton_clicked()
             user = q1.value(0).toString(); // set user to username from databse - user is delcared in header file so it accesible in other pages
         }
     }
+    AddSet *homeScreenWindow = new class AddSet;
+    homeScreenWindow->show();
+    close();
 
     // when user found
-    if(userFound == true){
-        AddSet *homeScreenWindow = new class AddSet; // weve imported 'Home' header file up top. setting variable to new instance of that class
-        homeScreenWindow->show(); // showing that class (opening the page)
-        this->close(); // closes this screen - can also just use close();
-    }
-    else {
-        QMessageBox::information(this,"No", "wrong"); // error message when username or password is incorrect
-    };
+//    if(userFound == true){
+//        AddSet *homeScreenWindow = new class AddSet; // weve imported 'Home' header file up top. setting variable to new instance of that class
+//        homeScreenWindow->show(); // showing that class (opening the page)
+//        this->close(); // closes this screen - can also just use close();
+//    }
+//    else {
+//        QMessageBox::information(this,"No", "wrong"); // error message when username or password is incorrect
+//    };
 
     // we could aslo run 2 if statements inside the while statement to check the user name and password seperatly and set
     // boolean variables accordignly, then we could tell the user which input was incorrect
