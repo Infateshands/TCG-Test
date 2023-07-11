@@ -37,23 +37,31 @@ void AddSet::addCard()
 
 void AddSet::drawLayout(){
     mainLayout = new QVBoxLayout;
-    mainLayout->SetFixedSize(500,500);
+    QVBoxLayout *inputLayout = new QVBoxLayout;
+    QHBoxLayout *cardsLayout = new QHBoxLayout;
+
+
+
     franchiseEdit->setStyleSheet("background-color: #b031ff;"
                                  "border-radius: 10;");
     setNameEdit->setStyleSheet("background-color: #b031ff;"
                                "border-radius: 10;");
-    mainLayout->setAlignment(Qt::AlignHCenter);
-    mainLayout->addWidget(franchiseLabel);
+    inputLayout->setAlignment(Qt::AlignHCenter);
+    inputLayout->addWidget(franchiseLabel);
     franchiseEdit->setFixedHeight(40);
     franchiseEdit->setFixedWidth(200);
     franchiseEdit->setObjectName("edit");
-    mainLayout->addWidget(franchiseEdit);
-    mainLayout->addWidget(setNameLabel);
+    inputLayout->addWidget(franchiseEdit);
+    inputLayout->addWidget(setNameLabel);
     setNameEdit->setFixedHeight(40);
     setNameEdit->setFixedWidth(200);
-    mainLayout->addWidget(setNameEdit);
-    mainLayout->addWidget(addCardButton);
-    QHBoxLayout *cardsLayout = new QHBoxLayout;
+    inputLayout->addWidget(setNameEdit);
+    inputLayout->addWidget(addCardButton);
+    addCardButton->setFixedHeight(40);
+    addCardButton->setFixedWidth(200);
+    mainLayout->addLayout(inputLayout);
+    mainLayout->addLayout(cardsLayout);
+
 
     for(int i = 0; i<cards.size(); i++){
         QFrame *frame = new QFrame;
@@ -76,7 +84,7 @@ void AddSet::drawLayout(){
         cardsLayout->addWidget(frame);
     }
 
-    mainLayout->addLayout(cardsLayout);
+
 
 }
 
