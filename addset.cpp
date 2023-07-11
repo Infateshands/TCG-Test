@@ -37,10 +37,16 @@ void AddSet::addCard()
 
 void AddSet::drawLayout(){
     mainLayout = new QVBoxLayout;
+    mainLayout->SetFixedSize(500,500);
+    franchiseEdit->setStyleSheet("background-color: #b031ff;"
+                                 "border-radius: 10;");
+    setNameEdit->setStyleSheet("background-color: #b031ff;"
+                               "border-radius: 10;");
     mainLayout->setAlignment(Qt::AlignHCenter);
     mainLayout->addWidget(franchiseLabel);
     franchiseEdit->setFixedHeight(40);
     franchiseEdit->setFixedWidth(200);
+    franchiseEdit->setObjectName("edit");
     mainLayout->addWidget(franchiseEdit);
     mainLayout->addWidget(setNameLabel);
     setNameEdit->setFixedHeight(40);
