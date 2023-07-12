@@ -137,6 +137,11 @@ QPushButton {
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
   </widget>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -191,6 +196,14 @@ QPushButton {
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLineEdit" name="name">
    <property name="geometry">
@@ -206,6 +219,14 @@ QPushButton {
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="numberLabel">
@@ -258,9 +279,16 @@ QPushButton {
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <zorder>frame</zorder>
-  <zorder>layoutWidget</zorder>
   <zorder>rarityLabel</zorder>
   <zorder>number</zorder>
   <zorder>name</zorder>

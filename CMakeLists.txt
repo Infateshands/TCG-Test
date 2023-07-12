@@ -22,6 +22,9 @@ set(PROJECT_SOURCES
         home.ui
         addset.h addset.cpp addset.ui
         addcard.h addcard.cpp addcard.ui
+        displaycards.h displaycards.cpp displaycards.ui
+        img.qrc
+        flowlayout.cpp flowlayout.h
 
 )
 

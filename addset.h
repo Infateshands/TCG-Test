@@ -23,8 +23,9 @@ public:
     ~AddSet();
 
 private slots:
-    void addCard();
-    void drawLayout();
+
+
+    void on_addButton_clicked();
 
 private:
     Ui::AddSet *ui;

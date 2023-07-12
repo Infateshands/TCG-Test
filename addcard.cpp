@@ -18,15 +18,10 @@ AddCard::~AddCard()
     delete ui;
 }
 
-void AddCard::on_pushButton_2_clicked()
-{
-   image = QFileDialog::getOpenFileName();
 
 
-}
 
-
-void AddCard::on_pushButton_clicked()
+void AddCard::on_addButton_clicked()
 {
    Card c1;
    c1.cardImage = image;
@@ -39,7 +34,12 @@ void AddCard::on_pushButton_clicked()
    hide();
    AddSet *newAddSetWindow = new AddSet;
    newAddSetWindow->show();
+}
 
+
+void AddCard::on_browseButton_clicked()
+{
+   image = QFileDialog::getOpenFileName();
 
 }
 

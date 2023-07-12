@@ -26,9 +26,11 @@ public:
 
 
 private slots:
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_clicked();
+
+    void on_addButton_clicked();
+
+    void on_browseButton_clicked();
 
 private:
     Ui::AddCard *ui;
